@@ -1,0 +1,162 @@
+body {
+    position: relative;
+    background: transparent;
+  }
+@media (min-width: 1024px) {
+    body::before {
+      background-attachment: fixed;
+    }
+  }
+#header h1 {
+    text-align: center;
+    text-shadow: 10px 20px 20px rgba(58, 52, 4, 0.8);
+    background-color: cornflowerblue;
+    margin: 0%;
+    padding: 15px;
+    font-size: 40px;
+}
+.BankSys .main__image img {
+    width: 100%;
+    height: 500px;
+}
+.options {
+    display: flex;
+    flex-flow: row;
+    padding: 20px;
+    margin: 5px 27% 5px 27%;
+    font-size: 25px;
+    align-items: center;
+    text-indent: 60px;
+    text-shadow: 10px 20px 20px rgba(58, 52, 4, 0.8);
+}
+.options a {
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+}
+.description {
+    position: absolute;
+    top:70px;
+    left:0;
+    width: 100%;
+    height: 28.5%;
+    margin-top: 80px;
+    background: rgba(0,0,0,0.6);
+    color:white;
+    font-family: 'Quicksand', sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    border-radius: 5px;
+    font-size: 30px;
+}
+.description:hover {
+    opacity: 1;
+}
+#des {
+    margin-top: 50px;
+    padding: 10px;
+    font-size: 25px;
+    font-family: sans-serif;
+    background-color: cornflowerblue;
+    font-weight: bold;
+}
+#des .des__bank {
+    text-align: center;
+}
+
+@media (max-width: 992px) {
+    .heading {
+      font-size: 30px;
+      align-items: center;
+    }
+  
+}
+.heading {
+    text-align: center;
+    font-size: 30px;
+    text-shadow: 10px 20px 20px rgba(58, 52, 4, 0.8);
+    font-family: sans-serif;
+    font-weight: bold;
+    padding: 15px;
+}
+.card {
+    width: 20%;
+    margin: 81px;
+    background-color: cornflowerblue;
+    margin-top: 0%;
+    display: inline-block;
+    margin-top: 5%;
+    padding-bottom: 10%;
+    border-radius: 10px;
+    box-shadow: 10px 20px 20px rgba(58, 52, 4, 0.8);
+}
+.card .info {
+    align-items: center;
+    font-size: 22px;
+    font-family: sans-serif;
+    font-weight: bold;
+}
+.card .info h3 {
+    text-align: center;
+    margin-top: 100px;
+    text-shadow: 10px 20px 20px rgba(58, 52, 4, 0.8);
+    
+}
+.card .info button {
+    margin-left: 60px;
+    padding: 8px 15px 8px 15px;
+    margin-top: 50px;
+    margin-left: 35px;
+    width: 70%;
+    font-size: 15px;
+    align-content: center;
+    align-items: center;
+    background-color: white;
+    border-radius: 8px;
+    color: black;
+    box-shadow: 10px 20px 20px rgba(58, 52, 4, 0.8);
+    cursor: pointer;
+    font-weight: bold;
+}
+#footer {
+    position: absolute;
+    width: 98%;
+    padding: 15px;
+    text-align: center;
+    background-color: black;
+    font-size: 13px;
+    color: white;
+    z-index: 999999;
+  }
+  
+@media (max-width: 992px) {
+    #footer {
+      text-align: center;
+      letter-spacing: 1px;
+      padding: 10px;
+      background: rgba(0, 0, 0, 0.8);
+    }
+  } 
+#footer .copyright span {
+    color: #356ee8;
+    transition: 0.3s;
+  }
+  
+#footer .copyright span:hover {
+    color: white;
+  }
+  
+#footer .credits a {
+    color: #356ee8;
+    transition: 0.3s;
+    text-decoration: none+666;
+  }
+  
+#footer .credits a:hover {
+    color: white;
+  }
+
+

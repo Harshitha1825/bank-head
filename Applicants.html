@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Customers Details</title>
+
+    <!--CSS FILES-->
+
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet">
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" rel="stylesheet">    
+
+    <!--MAIN CSS FILE-->
+
+    <link rel="stylesheet" href="bank_head.css">
+    <link rel="stylesheet" href="Applicants.css">
+
+    <!--Js Files-->
+
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+    <script src="https://unpkg.com/popper.js@1.12.6/dist/umd/popper.js"></script>
+    <script src="https://unpkg.com/bootstrap-material-design@4.1.1/dist/js/bootstrap-material-design.js"></script>
+
+</head>
+<body>
+    <!--=====Banking Sys Header=====-->
+
+    <header id="header">
+        <div class="customer_history">
+            <div class="name">
+                <h1>BANK OF INDIA</h1>
+            </div>
+            <div class="option">
+                <a href="bank_head.html">HOME</a>
+                <a href="#box">CUSTOMER DETAILS</a>
+            </div>
+        </div>
+    </header>
+
+        <!--Customer Details In Detail-->
+
+    <section id="customer" class="customer">
+        <div class="container">
+            <div class="section-title">
+                <h2>Customers Bank Details</h2>
+                <p>Latest Transaction History</p>
+            </div>
+    
+            <div class="text-center">
+                <h3>Net Bank Balance : ₹<span id="myAccountBalance">100000</span></h3>
+            
+                <button class="btn" data-toggle="modal" data-target="#sendMoney">TRANSFER MONEY</button>
+                <button class="btn" data-toggle="modal" data-target="#transactionHistory">VIEW TRANSFERED HISTORY</button>
+                <button class="btn" data-toggle="modal" data-target="#registration">REGISTRATION</button>
+            </div>
+            
+                <!--=== Transaction Model (SENDING & RECEIVING)===-->
+
+                <div class="modal trans" id="sendMoney" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                    <div class="modal-dialog" role="document">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="exampleModalLabel">Transaction Implementation</h5>
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
+                            </div>
+                            
+                            <div class="modal-body">
+                                <form action="">
+                                    <div class="input-group mb-3">
+                                        <label for="customers" class="input-group" placeholder="Sender's Name"></label>
+                                        <select id="sender" name="customer">
+                                            <option value="select">Select Sender's Name</option>                                        
+                                            <option value="harshitha">Harshitha</option>
+                                            <option value="ishwarya">Ishwarya</option>
+                                            <option value="ishita">Ishita</option>
+                                            <option value="mohan">Mohan</option>
+                                            <option value="karan">Karan</option>
+                                            <option value="salman">Salman</option>
+                                            <option value="varun">Varun</option>
+                                            <option value="krishna">Krishna</option>
+                                            <option value="alia">Alia</option>
+                                            <option value="ranveer">Ranveer</option>
+                                        </select>
+                                        
+                                        <div class="input-group-append">
+                                            <span id="basic-addon2"></span>
+                                        </div>
+                                    </div>
+    
+                                    <div class="input-group mb-3">
+                                        <label for="customers" class="input-group" placeholder="Receiver's Name"></label>
+                                        <select id="receiver" name="customer">
+                                            <option value="select">Select Receiver's Name</option>                                        
+                                            <option value="harshitha">Harshitha</option>
+                                            <option value="ishwarya">Ishwarya</option>
+                                            <option value="ishita">Ishita</option>
+                                            <option value="mohan">Mohan</option>
+                                            <option value="karan">Karan</option>
+                                            <option value="salman">Salman</option>
+                                            <option value="varun">Varun</option>
+                                            <option value="krishna">Krishna</option>
+                                            <option value="alia">Alia</option>
+                                            <option value="ranveer">Ranveer</option>
+                                        </select>
+                                        
+                                        <div class="input-group-append">
+                                            <span id="basic-addon2"></span>
+                                        </div>
+                                    </div>
+    
+                                    <div class="input-group mb-3">
+                                        <label for="account" class="input-group"></label>
+                                        <input type="number" id="accountNumber" placeholder="Account Number">
+                                    </div>
+    
+                                    <div class="input-group mb-3">
+                                        <label for="quantity" aria-placeholder="Sending Amount" class="input-group"></label>
+                                        <input type="text" id="enterAmount" name="quantity" min="500" placeholder="Enter Amount in Rs" aria-label="Amount (to the nearest rupees)">
+                                    </div>
+                                </form>
+                            </div>
+                            
+                            <div class="modal-footer">
+                                <button type="button" class="btn" data-dismiss="modal" style="margin-left: 220px;">Close</button>
+                                <button type="button" onclick="sendMoney()" class="btn btn-success" data-dismiss="modal">SEND</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!--=== Transaction Model History ===-->
+
+                <div class="modal trans" id="transactionHistory" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="exampleModalLabel">Transaction History</h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button> 
+                        </div>
+                        
+                        <div class="modal-body">
+                            <li id="transaction-history">
+                                
+                            </li>
+                        </div>
+                        
+                        <div class="modal-footer">
+                            <button type="button" class="btn" data-dismiss="modal" style="margin-left: 43%;">Close</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- New User Registration Process-->
+
+            <div class="modal trans" id="registration" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="exampleModalLabel">New User Registration</h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button> 
+                        </div>
+
+                        <div class="modal-body">
+                            <form action="">
+                                <div class="input-group mb-3">
+                                    <label for="newCustomer" class="input-group"></label>
+                                    <input type="string" id="name" placeholder="Enter Name">
+                                </div>
+                                <div class="input-group mb-3">
+                                    <label for="email" class="input-group"></label>
+                                    <input type="email" id="email" placeholder="Enter E-mail">
+                                </div>
+                                <div class="input-group mb-3">
+                                    <label for="bankBalance" class="input-group"></label>
+                                    <input type="number" id="balance" placeholder="Enter Balance">
+                                </div>
+                            </form>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn" data-dismiss="modal" style="margin-left: 220px;">Close</button>
+                            <button type="button" onclick="displayDetails()" class="btn btn-success" data-dismiss="modal">Registration</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <!-- table  -->
+            <div class="box" id="box">
+                <div class="table-info">
+                    <table class="table" id="display">
+                        <thead>
+                            <tr>
+                                <th>ID</th>
+                                <th>Name</th>
+                                <th>E-mail</th>
+                                <th>Account Number</th>
+                                <th>Bank Balance(in Rs)</th>
+                                <th>View Details</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>1</td>
+                                <td>Harshitha</td>
+                                <td>harshitha@gmail.com</td>
+                                <td>111111</td>
+                                <td>₹<p id="harshitha_Bank_Balance">10000</p></td>
+                                <td><a href="#Harshitha" id="View">View</a></td>
+                            </tr>
+                            <tr>
+                                <td>2</td>
+                                <td>Ishwarya</td>
+                                <td>ishwarya@gmail.com</td>
+                                <td>222222</td>
+                                <td>₹<p id="ishwarya_Bank_Balance">14000</p></td>
+                                <td><a href="#" id="View">View</a></td>
+                            </tr>
+                            <tr>
+                                <td>3</td>
+                                <td>Ishita</td>
+                                <td>ishita@gmail.com</td>
+                                <td>333333</td>
+                                <td>₹<p id="ishita_Bank_Balance">12000</p></td>
+                                <td><a href="#" id="View">View</a></td>
+                            </tr>
+                            <tr>
+                                <td>4</td>
+                                <td>Mohan</td>
+                                <td>Mohan@gmail.com</td>
+                                <td>444444</td>
+                                <td>₹<p id="Mohan_Bank_Balance">44000</p></td>
+                                <td><a href="#" id="View">View</a></td>
+                            </tr>
+                            <tr>
+                                <td>5</td>
+                                <td>Karan</td>
+                                <td>karan@gmail.com</td>
+                                <td>555555</td>
+                                <td>₹<p id="karan_Bank_Balance">93000</p></td>
+                                <td><a href="#" id="View">View</a></td>
+                            </tr>
+                            <tr>
+                                <td>6</td>
+                                <td>Salman</td>
+                                <td>salman@gmail.com</td>
+                                <td>666666</td>
+                                <td>₹<p id="Salman_Bank_Balance">10500</p></td>
+                                <td><a href="#" id="View">View</a></td>
+                            </tr>
+                            <tr>
+                                <td>7</td>
+                                <td>Varun</td>
+                                <td>varun@gmail.com</td>
+                                <td>777777</td>
+                                <td>₹<p id="Varun_Bank_Balance">56000</p></td>
+                                <td><a href="#" id="View">View</a></td>
+                            </tr>
+                            <tr>
+                                <td>8</td>
+                                <td>Krishna</td>
+                                <td>krishna@gmail.com</td>
+                                <td>888888</td>
+                                <td>₹<p id="Krishna_Bank_Balance">35600</p></td>
+                                <td><a href="#" id="View">View</a></td>
+                            </tr>
+                            <tr>
+                                <td>9</td>
+                                <td>Alia</td>
+                                <td>alia@gmail.com</td>
+                                <td>999999</td>
+                                <td>₹<p id="Alia_Bank_Balance">85000</p></td>
+                                <td><a href="#" id="View">View</a></td>
+                            </tr>
+                            <tr>
+                                <td>10</td>
+                                <td>Ranveer</td>
+                                <td>ranveer@gmail.com</td>
+                                <td>123456</td>
+                                <td>₹<p id="Ranveer_Bank_Balance">50000</p></td>
+                                <td><a href="#" id="View">View</a></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    
+    </section>
+
+    <div class="Customers_des">
+        <div class="details_info">
+            <ul id="Harshitha">
+                <li><span><b>ID</b></span>:1</li>
+                <li><span><b>Name</b></span>:Harshitha</li>
+                <li><span><b>E-mail</b></span>:harshitha@gmail.com</li>
+                <li><span><b>Account Number</b></span>:111111</li>
+                <li><span><b>Balance(in Rs)</b></span>:10000</li>
+            </ul>
+        </div>
+    </div>
+
+
+    <!--Main Js File-->
+    
+    <script src="Applicants.js" type="text/javascript" async></script>
+
+</body>
+</html>

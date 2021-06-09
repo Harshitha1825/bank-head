@@ -1,0 +1,136 @@
+.option {
+    display: flex;
+    flex-flow: row;
+    padding: 20px;
+    font-size: 25px;
+    align-items: center;
+    margin-left: 27%;
+    text-indent: 60px;
+    text-shadow: 10px 20px 20px rgba(58, 52, 4, 0.8);
+}
+.option a {
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+    padding: 10px;
+}
+
+/*----Headlines----*/
+
+section {
+    overflow: hidden;
+    width: 100%;
+    bottom: 100%;
+    z-index: 1;
+  }
+section.section-show {
+    bottom: auto;
+    opacity: 1;
+    padding-bottom: 45px;
+  }  
+section .container {
+    background: white;
+    padding: 30px;
+  }
+.section-title {
+    text-align: center;
+    font-size: 25px;
+    width: 100%;
+    margin-top: -30px;
+    background-color: cornflowerblue;
+}
+
+/*----Customer Details----*/
+
+.customer .btn {
+    text-align: center;
+    background: white;
+    border-radius: 10px;
+    transition: all ease-in-out 0.3s;
+    color: black;
+    font-family: sans-serif;
+    font-weight: bold;
+    transition: 0.2s;
+    margin-top: 10px;
+    padding: 10px 20px;
+  }
+  
+.customer .btn:hover {
+    background: cornflowerblue;
+    border: 1px solid black;
+    transition: 0.2s;
+  }
+.customer .table {
+    width: 100%;
+    margin-top: 20px;
+    border-collapse: collapse;
+    overflow: hidden;
+    border: 4px solid black;
+    box-shadow: 10px 20px 20px rgba(58, 52, 4, 0.8);
+}
+.customer th,td {
+    font-size: 20px;
+    border: 2px solid black;
+    padding-left: 20px;
+    background-color: rgba(155, 178, 189, 0.2);
+}
+.customer td {
+    padding-left: 60px;
+    font-weight: normal;
+}
+.customer tbody tr:hover {
+    background-color: rgba(155, 178, 189, 0.3);
+    transition: 0.2s;
+    opacity: 1;
+  }
+
+.modal-header h5 {
+  padding: 10px;
+}
+.customer .modal-content {
+    background-color: rgba(100, 149, 237, 0.9);
+    color: #fff;
+    border: 4px solid white;
+    box-shadow: 10px 15px 15px rgba(58, 52, 4, 0.8);
+    margin-right: 40%;
+    margin-bottom: 20px;
+  }
+  
+.customer .input-group {
+    font-size: 15px;
+    margin-top: -15px;
+  }
+.input-group {
+    padding: 5px;
+    margin-left: 25%;
+}
+.input-group input {
+    height: 50%;
+    width: 50%;
+    padding: 5px;
+}
+.modal-title {
+  font-size: 25px;
+  text-align: center;
+  color: black;
+  text-shadow: 5px 10px 10px rgba(58, 52, 4, 0.8);
+  margin-top: 10px;
+}
+
+/*---Customer profile---*/
+
+.Customers_des {
+    position: relative;
+    padding: 5px 20px 5px 20px;
+    margin-right: 30%;
+    font-size: 25px;
+    font-family: sans-serif;
+    background-color: cornflowerblue;
+    box-shadow: 5px 10px 10px rgba(58, 52, 4, 0.8);
+    margin-top: -50%;
+    margin-left: 20%;
+    display: none;
+}
+#View:checked ~ .Customers_des {
+  display: block;
+}
